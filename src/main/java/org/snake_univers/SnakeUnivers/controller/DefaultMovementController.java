@@ -13,6 +13,11 @@ public class DefaultMovementController implements PositionController {
     }
 
     @Override
+    public Coordinates setPosition(Coordinates coordinates) {
+        return game.setPosition(coordinates);
+    }
+
+    @Override
     public Coordinates changePosition(@RequestBody Coordinates coordinates) {
         return game.changePosition(coordinates);
     }

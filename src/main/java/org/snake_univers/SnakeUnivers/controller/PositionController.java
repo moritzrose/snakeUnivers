@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/position")
 public interface PositionController {
 
+    @PostMapping
+    Coordinates setPosition(@RequestBody Coordinates coordinates);
+
     @PutMapping()
     Coordinates changePosition(@RequestBody Coordinates coordinates);
 

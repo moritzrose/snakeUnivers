@@ -1,13 +1,17 @@
 package org.snake_univers.SnakeUnivers.controller;
 
-import org.snake_univers.SnakeUnivers.entities.PositionDTO;
+import org.snake_univers.SnakeUnivers.entities.Coordinates;
+import org.snake_univers.SnakeUnivers.entities.DirectionalInput;
 import org.springframework.web.bind.annotation.*;
 
 public interface CoordinateController {
 
+    @PostMapping
+    Coordinates setPositon(@RequestBody Coordinates coordinates);
+
     @PutMapping
-    PositionDTO changePosition(@RequestBody PositionDTO positionRequestDTO);
+    Coordinates changePosition(@RequestBody DirectionalInput directionalInput);
 
     @GetMapping
-    PositionDTO getPosition();
+    Coordinates getPosition();
 }
